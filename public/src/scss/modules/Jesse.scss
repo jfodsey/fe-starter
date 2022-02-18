@@ -2,8 +2,15 @@
     content: "4";
 }
 
+html{
+    background: linear-gradient(to top, hsl(230, 17%, 14%)75%, #20222F 25%);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    height: 100vh;
+    font-size: 10px;
+}
+
 Body{
-    background-color: #1D2029;
     color: white;
     text-align: center;
     font-family: "Inter";
@@ -21,16 +28,17 @@ Body{
     display: inline-block;
     width:31%;
     margin-right: 10%;
-    margin-left: 12.5%;
+    margin-left: 16.5%;
     text-align: right;
 }
 
 .card{
-    width:17%;
+    position: relative;
+    width:18.5%;
     background-color: #252B43;
-    border-radius: 4px;
     display: inline-block;
-    margin: 1.6%;
+    margin: .76%;
+    border-radius: 4px;
 }
 
 .card:hover{
@@ -38,7 +46,7 @@ Body{
 }
 
 .card_big{
-    border-top: solid;
+    position: relative;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -51,25 +59,25 @@ Body{
     margin-bottom: 20px;
 }
 
-.facebook{
-    border-color: #1892FA;
+.facebook:before{
+    background-color: #1892FA;
 }
 
-.twitter{
-    border-color: #1CA5F8;
+.twitter:before{
+    background-color: #1CA5F8;
 }
 
-.instagram{
-    border-top: solid;
+.instagram:before{
+    background-image: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
 
-.youtube{
-    border-color: #C7042B;
+.youtube:before{
+    background-color: #C7042B;
 }
 
 #overview{
     text-align: left;
-    margin-left: 12.5%;
+    margin-left: 11.25%;
     padding: 0%;
     margin-bottom: 0px;
 }
@@ -94,12 +102,12 @@ Body{
 
 .header{
     margin-top: 3%;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 h1{
     margin: 0px;
-    font-size: 35px;
+    font-size: 3.5rem;
 }
 
 /* Switch */
@@ -162,7 +170,7 @@ border-radius: 50%;
 }
 
 .small{
-    font-size: 8px;
+    font-size: .8rem;
     font-weight: bold;
     display: inline-block;
     line-height:12px;
@@ -176,7 +184,7 @@ border-radius: 50%;
 }
 
 .sub{
-    font-size: 10px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -187,19 +195,19 @@ img{
 
 .card_followers{
     margin-top: 0%;
-    font-size: 10px;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .card_small_number{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .rating{
     font-weight: bold;
-    font-size: 8px;
+    font-size: .8rem;
     margin-top: 10px;
 }
 
@@ -216,4 +224,17 @@ img{
     height: 5px;
     margin-right: 2px;
     margin-bottom: 1px;
+}
+
+.card_big:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height:5px;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
